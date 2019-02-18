@@ -12,6 +12,25 @@
 		70C844AD221986E800E76683 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70C844AC221986E800E76683 /* Assets.xcassets */; };
 		70C844B0221986E800E76683 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70C844AE221986E800E76683 /* LaunchScreen.storyboard */; };
 		70C844BE2219874300E76683 /* UXSketchLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C844BD2219874300E76683 /* UXSketchLabelTests.swift */; };
+		70C8450122198A8D00E76683 /* HelveticaNeue.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 70C844EF22198A8D00E76683 /* HelveticaNeue.ttc */; };
+		70E5F8A2221A13FB0012C64A /* FontFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5F8A1221A13FB0012C64A /* FontFactory.swift */; };
+		70E5F8A4221A18660012C64A /* BaselinePredictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5F8A3221A18660012C64A /* BaselinePredictions.swift */; };
+		70E5F8A6221A186C0012C64A /* PredictionVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5F8A5221A186C0012C64A /* PredictionVerifier.swift */; };
+		70E5F8B6221A24490012C64A /* SanFrancisco-Text.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70E5F8B5221A24490012C64A /* SanFrancisco-Text.otf */; };
+		70E5F8B8221A244F0012C64A /* SanFrancisco-Display.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70E5F8B7221A244F0012C64A /* SanFrancisco-Display.otf */; };
+		70E5F8BA221A24550012C64A /* Lato.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70E5F8B9221A24550012C64A /* Lato.ttf */; };
+		70FCC159221A35DE0071E7A9 /* Lato-BaselineExplicit.csv in Resources */ = {isa = PBXBuildFile; fileRef = 70FCC14A221A35DE0071E7A9 /* Lato-BaselineExplicit.csv */; };
+		70FCC15A221A35DE0071E7A9 /* SanFrancisco-Display-BaselineNatural.csv in Resources */ = {isa = PBXBuildFile; fileRef = 70FCC14B221A35DE0071E7A9 /* SanFrancisco-Display-BaselineNatural.csv */; };
+		70FCC15B221A35DE0071E7A9 /* HelveticaNeue-BaselineExplicit.csv in Resources */ = {isa = PBXBuildFile; fileRef = 70FCC14C221A35DE0071E7A9 /* HelveticaNeue-BaselineExplicit.csv */; };
+		70FCC15C221A35DE0071E7A9 /* SanFrancisco-Text-BaselineNatural.csv in Resources */ = {isa = PBXBuildFile; fileRef = 70FCC14D221A35DE0071E7A9 /* SanFrancisco-Text-BaselineNatural.csv */; };
+		70FCC15D221A35DE0071E7A9 /* Lato-LineHeight.csv in Resources */ = {isa = PBXBuildFile; fileRef = 70FCC14E221A35DE0071E7A9 /* Lato-LineHeight.csv */; };
+		70FCC15E221A35DE0071E7A9 /* Lato-BaselineNatural.csv in Resources */ = {isa = PBXBuildFile; fileRef = 70FCC14F221A35DE0071E7A9 /* Lato-BaselineNatural.csv */; };
+		70FCC15F221A35DE0071E7A9 /* SanFrancisco-Display-BaselineExplicit.csv in Resources */ = {isa = PBXBuildFile; fileRef = 70FCC150221A35DE0071E7A9 /* SanFrancisco-Display-BaselineExplicit.csv */; };
+		70FCC162221A35DE0071E7A9 /* HelveticaNeue-BaselineNatural.csv in Resources */ = {isa = PBXBuildFile; fileRef = 70FCC153221A35DE0071E7A9 /* HelveticaNeue-BaselineNatural.csv */; };
+		70FCC163221A35DE0071E7A9 /* SanFrancisco-Display-LineHeight.csv in Resources */ = {isa = PBXBuildFile; fileRef = 70FCC154221A35DE0071E7A9 /* SanFrancisco-Display-LineHeight.csv */; };
+		70FCC164221A35DE0071E7A9 /* SanFrancisco-Text-BaselineExplicit.csv in Resources */ = {isa = PBXBuildFile; fileRef = 70FCC155221A35DE0071E7A9 /* SanFrancisco-Text-BaselineExplicit.csv */; };
+		70FCC166221A35DE0071E7A9 /* HelveticaNeue-LineHeight.csv in Resources */ = {isa = PBXBuildFile; fileRef = 70FCC157221A35DE0071E7A9 /* HelveticaNeue-LineHeight.csv */; };
+		70FCC167221A35DE0071E7A9 /* SanFrancisco-Text-LineHeight.csv in Resources */ = {isa = PBXBuildFile; fileRef = 70FCC158221A35DE0071E7A9 /* SanFrancisco-Text-LineHeight.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +43,25 @@
 		70C844BB2219874300E76683 /* UXSketchLabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UXSketchLabelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70C844BD2219874300E76683 /* UXSketchLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UXSketchLabelTests.swift; sourceTree = "<group>"; };
 		70C844BF2219874300E76683 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70C844EF22198A8D00E76683 /* HelveticaNeue.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = HelveticaNeue.ttc; sourceTree = "<group>"; };
+		70E5F8A1221A13FB0012C64A /* FontFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFactory.swift; sourceTree = "<group>"; };
+		70E5F8A3221A18660012C64A /* BaselinePredictions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaselinePredictions.swift; sourceTree = "<group>"; };
+		70E5F8A5221A186C0012C64A /* PredictionVerifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionVerifier.swift; sourceTree = "<group>"; };
+		70E5F8B5221A24490012C64A /* SanFrancisco-Text.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFrancisco-Text.otf"; sourceTree = "<group>"; };
+		70E5F8B7221A244F0012C64A /* SanFrancisco-Display.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFrancisco-Display.otf"; sourceTree = "<group>"; };
+		70E5F8B9221A24550012C64A /* Lato.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lato.ttf; sourceTree = "<group>"; };
+		70FCC14A221A35DE0071E7A9 /* Lato-BaselineExplicit.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Lato-BaselineExplicit.csv"; sourceTree = "<group>"; };
+		70FCC14B221A35DE0071E7A9 /* SanFrancisco-Display-BaselineNatural.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SanFrancisco-Display-BaselineNatural.csv"; sourceTree = "<group>"; };
+		70FCC14C221A35DE0071E7A9 /* HelveticaNeue-BaselineExplicit.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "HelveticaNeue-BaselineExplicit.csv"; sourceTree = "<group>"; };
+		70FCC14D221A35DE0071E7A9 /* SanFrancisco-Text-BaselineNatural.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SanFrancisco-Text-BaselineNatural.csv"; sourceTree = "<group>"; };
+		70FCC14E221A35DE0071E7A9 /* Lato-LineHeight.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Lato-LineHeight.csv"; sourceTree = "<group>"; };
+		70FCC14F221A35DE0071E7A9 /* Lato-BaselineNatural.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Lato-BaselineNatural.csv"; sourceTree = "<group>"; };
+		70FCC150221A35DE0071E7A9 /* SanFrancisco-Display-BaselineExplicit.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SanFrancisco-Display-BaselineExplicit.csv"; sourceTree = "<group>"; };
+		70FCC153221A35DE0071E7A9 /* HelveticaNeue-BaselineNatural.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "HelveticaNeue-BaselineNatural.csv"; sourceTree = "<group>"; };
+		70FCC154221A35DE0071E7A9 /* SanFrancisco-Display-LineHeight.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SanFrancisco-Display-LineHeight.csv"; sourceTree = "<group>"; };
+		70FCC155221A35DE0071E7A9 /* SanFrancisco-Text-BaselineExplicit.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SanFrancisco-Text-BaselineExplicit.csv"; sourceTree = "<group>"; };
+		70FCC157221A35DE0071E7A9 /* HelveticaNeue-LineHeight.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "HelveticaNeue-LineHeight.csv"; sourceTree = "<group>"; };
+		70FCC158221A35DE0071E7A9 /* SanFrancisco-Text-LineHeight.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SanFrancisco-Text-LineHeight.csv"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +87,8 @@
 			children = (
 				70C844A4221986E700E76683 /* Sources */,
 				70C844C42219878E00E76683 /* Other */,
+				70C844ED22198A8D00E76683 /* Fonts */,
+				70E5F8A9221A23190012C64A /* Data */,
 				70C844BC2219874300E76683 /* Tests */,
 				70C844A3221986E700E76683 /* Products */,
 			);
@@ -76,6 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				70C844BD2219874300E76683 /* UXSketchLabelTests.swift */,
+				70E5F8A3221A18660012C64A /* BaselinePredictions.swift */,
+				70E5F8A1221A13FB0012C64A /* FontFactory.swift */,
+				70E5F8A5221A186C0012C64A /* PredictionVerifier.swift */,
 				70C844BF2219874300E76683 /* Info.plist */,
 			);
 			path = Tests;
@@ -89,6 +132,36 @@
 				70C844AE221986E800E76683 /* LaunchScreen.storyboard */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		70C844ED22198A8D00E76683 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				70C844EF22198A8D00E76683 /* HelveticaNeue.ttc */,
+				70E5F8B5221A24490012C64A /* SanFrancisco-Text.otf */,
+				70E5F8B7221A244F0012C64A /* SanFrancisco-Display.otf */,
+				70E5F8B9221A24550012C64A /* Lato.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		70E5F8A9221A23190012C64A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				70FCC157221A35DE0071E7A9 /* HelveticaNeue-LineHeight.csv */,
+				70FCC153221A35DE0071E7A9 /* HelveticaNeue-BaselineNatural.csv */,
+				70FCC14C221A35DE0071E7A9 /* HelveticaNeue-BaselineExplicit.csv */,
+				70FCC158221A35DE0071E7A9 /* SanFrancisco-Text-LineHeight.csv */,
+				70FCC14D221A35DE0071E7A9 /* SanFrancisco-Text-BaselineNatural.csv */,
+				70FCC155221A35DE0071E7A9 /* SanFrancisco-Text-BaselineExplicit.csv */,
+				70FCC154221A35DE0071E7A9 /* SanFrancisco-Display-LineHeight.csv */,
+				70FCC14B221A35DE0071E7A9 /* SanFrancisco-Display-BaselineNatural.csv */,
+				70FCC150221A35DE0071E7A9 /* SanFrancisco-Display-BaselineExplicit.csv */,
+				70FCC14E221A35DE0071E7A9 /* Lato-LineHeight.csv */,
+				70FCC14F221A35DE0071E7A9 /* Lato-BaselineNatural.csv */,
+				70FCC14A221A35DE0071E7A9 /* Lato-BaselineExplicit.csv */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +252,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70C8450122198A8D00E76683 /* HelveticaNeue.ttc in Resources */,
+				70E5F8B6221A24490012C64A /* SanFrancisco-Text.otf in Resources */,
+				70E5F8B8221A244F0012C64A /* SanFrancisco-Display.otf in Resources */,
+				70E5F8BA221A24550012C64A /* Lato.ttf in Resources */,
+				70FCC166221A35DE0071E7A9 /* HelveticaNeue-LineHeight.csv in Resources */,
+				70FCC162221A35DE0071E7A9 /* HelveticaNeue-BaselineNatural.csv in Resources */,
+				70FCC15B221A35DE0071E7A9 /* HelveticaNeue-BaselineExplicit.csv in Resources */,
+				70FCC167221A35DE0071E7A9 /* SanFrancisco-Text-LineHeight.csv in Resources */,
+				70FCC15C221A35DE0071E7A9 /* SanFrancisco-Text-BaselineNatural.csv in Resources */,
+				70FCC164221A35DE0071E7A9 /* SanFrancisco-Text-BaselineExplicit.csv in Resources */,
+				70FCC163221A35DE0071E7A9 /* SanFrancisco-Display-LineHeight.csv in Resources */,
+				70FCC15A221A35DE0071E7A9 /* SanFrancisco-Display-BaselineNatural.csv in Resources */,
+				70FCC15F221A35DE0071E7A9 /* SanFrancisco-Display-BaselineExplicit.csv in Resources */,
+				70FCC15D221A35DE0071E7A9 /* Lato-LineHeight.csv in Resources */,
+				70FCC15E221A35DE0071E7A9 /* Lato-BaselineNatural.csv in Resources */,
+				70FCC159221A35DE0071E7A9 /* Lato-BaselineExplicit.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +287,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70E5F8A6221A186C0012C64A /* PredictionVerifier.swift in Sources */,
 				70C844BE2219874300E76683 /* UXSketchLabelTests.swift in Sources */,
+				70E5F8A4221A18660012C64A /* BaselinePredictions.swift in Sources */,
+				70E5F8A2221A13FB0012C64A /* FontFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
