@@ -10,14 +10,14 @@ import AppKit
 
 extension NSFont {
     public var predictedNaturalLineHeight: CGFloat {
-        return 0
+        return round(self.ascender) - round(self.descender)
     }
 
     public var predictedBaselineFromBottomEdgeWithImplicitLineHeight: CGFloat {
-        return 0
+        return round(-self.descender)
     }
 
     public func predictedBaselineFromBottomEdge(withExplicitLineHeight lineHeight: CGFloat) -> CGFloat {
-        return 0
+        return fmax(0, round((lineHeight - (self.ascender - self.descender)) / 2 - self.leading - self.descender))
     }
 }
