@@ -26,8 +26,8 @@ import UIKit
 
 
 /**
- * A drop-in replacement for `UILabel` that behaves more like text layers in
- * Sketch do.
+ * A drop-in replacement for `UILabel` that, when sized to fit, behaves more
+ * like text layers in Sketch do.
  *
  * Using instances of this class over `UILabel` has the following benefits:
  *
@@ -68,7 +68,7 @@ public final class UXSketchLabel: UILabel {
 
     // MARK: - Configuration
 
-    public var lineHeight: CGFloat? = 50 {
+    public var lineHeight: CGFloat? = nil {
         didSet { self.invalidateIntrinsicContentSize() }
     }
 
@@ -92,42 +92,48 @@ public final class UXSketchLabel: UILabel {
     private func updateAttributedString() {
         let lineHeight = self.effectiveLineHeight
 
-        if let attributedText = self.attributedText {
-            let attributedText = NSMutableAttributedString(attributedString: attributedText)
-            let range = NSRange(location: 0, length: attributedText.length)
+        let attributedText = self.attributedText.map(NSMutableAttributedString.init) ?? .init()
+        let range = NSRange(location: 0, length: attributedText.length)
 
-            attributedText.enumerateAttribute(.paragraphStyle, in: range, options: [], using: { value, range, _ in
-                let style = (value as? NSParagraphStyle)?.mutableCopy() as? NSMutableParagraphStyle ?? .init()
-                style.minimumLineHeight = lineHeight
-                style.maximumLineHeight = lineHeight
+        attributedText.enumerateAttribute(.paragraphStyle, in: range, options: [], using: { value, range, _ in
+            let style = (value as? NSParagraphStyle)?.mutableCopy() as? NSMutableParagraphStyle ?? .init()
+            style.minimumLineHeight = lineHeight
+            style.maximumLineHeight = lineHeight
+            style.alignment = self.textAlignment
+            style.lineBreakMode = self.lineBreakMode
 
-                attributedText.addAttribute(.paragraphStyle, value: style, range: range)
-            })
+            attributedText.addAttribute(.paragraphStyle, value: style, range: range)
+        })
 
-            super.attributedText = attributedText
-        }
+        super.attributedText = attributedText
     }
 
 
     // MARK: - Auto Layout
 
-    private let baselineLayoutGuide = UILayoutGuide()
+    // TODO: Support baseline-relative layout anchors
+    // When implementing, use two different layout guides in order not to force
+    // a minimum height upon the label as the layout guide must have a width ≥ 0
+    // and in potentially inset from the label.
+    // Also only create and configure the relevant constraints if baseline
+    // anchors are queried for the first time.
+//    private let baselineLayoutGuide = UILayoutGuide()
 
     private var firstBaselineFromTopEdgeConstraint: NSLayoutConstraint? = nil
     private var lastBaselineFromBottomEdgeConstraint: NSLayoutConstraint? = nil
 
     private func createBaselineLayoutConstraints() {
-        self.addLayoutGuide(self.baselineLayoutGuide)
-
-        let top = self.baselineLayoutGuide.topAnchor.constraint(equalTo: self.topAnchor)
-        let left = self.baselineLayoutGuide.leftAnchor.constraint(equalTo: self.leftAnchor)
-        let right = self.baselineLayoutGuide.rightAnchor.constraint(equalTo: self.rightAnchor)
-        let bottom = self.baselineLayoutGuide.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-
-        self.firstBaselineFromTopEdgeConstraint = top
-        self.lastBaselineFromBottomEdgeConstraint = bottom
-
-        NSLayoutConstraint.activate([top, left, right, bottom])
+//        self.addLayoutGuide(self.baselineLayoutGuide)
+//
+//        let top = self.baselineLayoutGuide.topAnchor.constraint(equalTo: self.topAnchor)
+//        let left = self.baselineLayoutGuide.leftAnchor.constraint(equalTo: self.leftAnchor)
+//        let right = self.baselineLayoutGuide.rightAnchor.constraint(equalTo: self.rightAnchor)
+//        let bottom = self.baselineLayoutGuide.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+//
+//        self.firstBaselineFromTopEdgeConstraint = top
+//        self.lastBaselineFromBottomEdgeConstraint = bottom
+//
+//        NSLayoutConstraint.activate([top, left, right, bottom])
     }
 
     public override func invalidateIntrinsicContentSize() {
@@ -163,13 +169,20 @@ public final class UXSketchLabel: UILabel {
         self.lastBaselineFromBottomEdgeConstraint?.constant = -baselineInset
     }
 
-    public override var firstBaselineAnchor: NSLayoutYAxisAnchor {
-        return self.baselineLayoutGuide.topAnchor
+    public override var intrinsicContentSize: CGSize {
+        var inherited = super.intrinsicContentSize
+        inherited.height = fmax(inherited.height, effectiveLineHeight)
+
+        return inherited
     }
 
-    public override var lastBaselineAnchor: NSLayoutYAxisAnchor {
-        return self.baselineLayoutGuide.bottomAnchor
-    }
+//    public override var firstBaselineAnchor: NSLayoutYAxisAnchor {
+//        return self.baselineLayoutGuide.topAnchor
+//    }
+//
+//    public override var lastBaselineAnchor: NSLayoutYAxisAnchor {
+//        return self.baselineLayoutGuide.bottomAnchor
+//    }
 
 
     // MARK: - Text Rendering
@@ -183,17 +196,14 @@ public final class UXSketchLabel: UILabel {
     }
 
     public override func drawText(in rect: CGRect) {
-
-        // start with alignment rect
         var rect = self.alignmentRect(forFrame: self.bounds)
 
-        // move last baseline to bottom of alignment rect
+        // Move last baseline to bottom of alignment rect
         let scale = self.window?.screen.scale ?? UIScreen.main.scale
-        let dy = round(-self.font.descender * scale) / scale
-        rect = rect.offsetBy(dx: 0, dy: dy)
+        rect.origin.y += round(-self.font.descender * scale) / scale
 
-        // move baseline to where Sketch wants it
-        rect = rect.offsetBy(dx: 0, dy: -self.lastBaselineInsetFromBottomEdge)
+        // Move baselines to where Sketch wants them
+        rect.origin.y -= self.lastBaselineInsetFromBottomEdge
 
         super.drawText(in: rect)
     }
