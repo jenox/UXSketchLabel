@@ -31,6 +31,7 @@
 		70FCC164221A35DE0071E7A9 /* SanFrancisco-Text-BaselineExplicit.csv in Resources */ = {isa = PBXBuildFile; fileRef = 70FCC155221A35DE0071E7A9 /* SanFrancisco-Text-BaselineExplicit.csv */; };
 		70FCC166221A35DE0071E7A9 /* HelveticaNeue-LineHeight.csv in Resources */ = {isa = PBXBuildFile; fileRef = 70FCC157221A35DE0071E7A9 /* HelveticaNeue-LineHeight.csv */; };
 		70FCC167221A35DE0071E7A9 /* SanFrancisco-Text-LineHeight.csv in Resources */ = {isa = PBXBuildFile; fileRef = 70FCC158221A35DE0071E7A9 /* SanFrancisco-Text-LineHeight.csv */; };
+		70FCC16A221A3F980071E7A9 /* UXSketchLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FCC169221A3F980071E7A9 /* UXSketchLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		70FCC155221A35DE0071E7A9 /* SanFrancisco-Text-BaselineExplicit.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SanFrancisco-Text-BaselineExplicit.csv"; sourceTree = "<group>"; };
 		70FCC157221A35DE0071E7A9 /* HelveticaNeue-LineHeight.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "HelveticaNeue-LineHeight.csv"; sourceTree = "<group>"; };
 		70FCC158221A35DE0071E7A9 /* SanFrancisco-Text-LineHeight.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SanFrancisco-Text-LineHeight.csv"; sourceTree = "<group>"; };
+		70FCC169221A3F980071E7A9 /* UXSketchLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UXSketchLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				70C844A5221986E700E76683 /* AppDelegate.swift */,
 				70C844A7221986E700E76683 /* ViewController.swift */,
+				70FCC169221A3F980071E7A9 /* UXSketchLabel.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			files = (
 				70C844A8221986E700E76683 /* ViewController.swift in Sources */,
 				70C844A6221986E700E76683 /* AppDelegate.swift in Sources */,
+				70FCC16A221A3F980071E7A9 /* UXSketchLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
